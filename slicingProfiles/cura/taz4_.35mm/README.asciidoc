@@ -5,7 +5,7 @@
 
 The materials for this class are licensed under the Apache license. See the file LICENSE for details.
 
-Copyright 2015 F Douthit
+Copyright 2016 F Douthit
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
