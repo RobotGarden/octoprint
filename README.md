@@ -24,5 +24,8 @@ limitations under the License.
 * You can use [SoapUI](http://www.soapui.org/) to operate the REST interface.
 * This repository contains a SoapUI project [Octoprint-soapui-project.xml](https://github.com/RobotGarden/octoprint/blob/master/Octoprint-soapui-project.xml).
 
+## Intro to Octoprint
+link:intro_to_octoprint.asciidoc[Introduction to Octoprint] for Robot Garden.
+
 ## How to use the Rostock
 Document how to use here
