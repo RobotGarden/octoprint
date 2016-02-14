@@ -1,0 +1,228 @@
+Intro to Octoprint
+
+Table of Contents
+------------------
+
+Table of Contents
+
+https://docs.google.com/document/d/1BvekENfLcxNv5ugeOjR9vivC2mzZPTj49KXYmFxOHXw/edit#heading=h.bcd2kq4e65ab[Table
+of Contents]
+
+https://docs.google.com/document/d/1BvekENfLcxNv5ugeOjR9vivC2mzZPTj49KXYmFxOHXw/edit#heading=h.us9fxtfd2e40[License]
+
+https://docs.google.com/document/d/1BvekENfLcxNv5ugeOjR9vivC2mzZPTj49KXYmFxOHXw/edit#heading=h.tp7l56s10c9l[Document
+History]
+
+https://docs.google.com/document/d/1BvekENfLcxNv5ugeOjR9vivC2mzZPTj49KXYmFxOHXw/edit#heading=h.bwmlkp82074c[What
+do we hope to accomplish?]
+
+https://docs.google.com/document/d/1BvekENfLcxNv5ugeOjR9vivC2mzZPTj49KXYmFxOHXw/edit#heading=h.qyaswqaq81kn[What
+is Octoprint?]
+
+https://docs.google.com/document/d/1BvekENfLcxNv5ugeOjR9vivC2mzZPTj49KXYmFxOHXw/edit#heading=h.zd6uxsyjm0qp[Authenticated
+v. Unauthenticated]
+
+https://docs.google.com/document/d/1BvekENfLcxNv5ugeOjR9vivC2mzZPTj49KXYmFxOHXw/edit#heading=h.yoisfxw72s60[The
+process]
+
+https://docs.google.com/document/d/1BvekENfLcxNv5ugeOjR9vivC2mzZPTj49KXYmFxOHXw/edit#heading=h.1lk0j73ocgcr[Login]
+
+https://docs.google.com/document/d/1BvekENfLcxNv5ugeOjR9vivC2mzZPTj49KXYmFxOHXw/edit#heading=h.z5ze1ucyedc0[Upload
+a File]
+
+https://docs.google.com/document/d/1BvekENfLcxNv5ugeOjR9vivC2mzZPTj49KXYmFxOHXw/edit#heading=h.5c2goygnf1h4[Slice
+a File]
+
+https://docs.google.com/document/d/1BvekENfLcxNv5ugeOjR9vivC2mzZPTj49KXYmFxOHXw/edit#heading=h.hu2f6hwj824h[Print
+a File]
+
+https://docs.google.com/document/d/1BvekENfLcxNv5ugeOjR9vivC2mzZPTj49KXYmFxOHXw/edit#heading=h.nlu7u971wrta[The
+Tabs]
+
+https://docs.google.com/document/d/1BvekENfLcxNv5ugeOjR9vivC2mzZPTj49KXYmFxOHXw/edit#heading=h.5r3d0npoa7gx[Temperature
+control]
+
+https://docs.google.com/document/d/1BvekENfLcxNv5ugeOjR9vivC2mzZPTj49KXYmFxOHXw/edit#heading=h.st8ro1739obd[Printer
+Controlling]
+
+https://docs.google.com/document/d/1BvekENfLcxNv5ugeOjR9vivC2mzZPTj49KXYmFxOHXw/edit#heading=h.tntyw7p1gv3d[GCode
+Viewer]
+
+https://docs.google.com/document/d/1BvekENfLcxNv5ugeOjR9vivC2mzZPTj49KXYmFxOHXw/edit#heading=h.tntyw7p1gv3d[Terminal]
+
+https://docs.google.com/document/d/1BvekENfLcxNv5ugeOjR9vivC2mzZPTj49KXYmFxOHXw/edit#heading=h.tntyw7p1gv3d[Timelapse]
+
+https://docs.google.com/document/d/1BvekENfLcxNv5ugeOjR9vivC2mzZPTj49KXYmFxOHXw/edit#heading=h.e32sv3joliny[Settings]
+
+https://docs.google.com/document/d/1BvekENfLcxNv5ugeOjR9vivC2mzZPTj49KXYmFxOHXw/edit#heading=h.95c17ypej4kx[System]
+
+https://docs.google.com/document/d/1BvekENfLcxNv5ugeOjR9vivC2mzZPTj49KXYmFxOHXw/edit#heading=h.nm7ew6r8r0s[Tips
+and tricks]
+
+https://docs.google.com/document/d/1BvekENfLcxNv5ugeOjR9vivC2mzZPTj49KXYmFxOHXw/edit#heading=h.zfw1ppls9db9[Resources]
+
+License
+-------
+
+The materials for this class are licensed under the Apache license. See
+the file LICENSE for details.
+
+Copyright 2016 F Douthit
+
+Licensed under the Apache License, Version 2.0 (the "License"); you may
+not use this file except in compliance with the License. You may obtain
+a copy of the License
+athttp://www.apache.org/licenses/LICENSE-2.0[]http://www.apache.org/licenses/LICENSE-2.0.
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+Document History
+----------------
+
+[cols=",",]
+|==================================
+|Notes |Date
+|Initial Revision |2016-01-30
+a|
+Add login, upload, slice and print.
+
+Add tabs outline.
+
+ |2016-02-01
+|==================================
+
+What do we hope to accomplish?
+------------------------------
+
+1.  Learn a little about what octoprint is and what you can do with it.
+2.  Learn how to upload a file
+3.  Learn what slicing is and how to slice a file
+4.  Temperature and pre-heating the bed and nozzle
+5.  Manual control of the printer
+6.  Video monitor your print and video capture your prints
+7.  Visualize your G-code
+8.  System
+9.  Tips and tricks
+10. Settings
+11. Resources
+
+What is Octoprint?
+------------------
+
+Octoprint is a web interface for a 3D printer. Octoprint makes it easy
+to use a 3D printer. It is FOSSware or free open source software.
+
+Authenticated v. Unauthenticated
+--------------------------------
+
+If you have not authenticated (logged in), your abilities with Octoprint
+will be limited. You can:
+
+1.  Observe but not set bed and nozzle temperatures from the temperature
+tab.
+2.  Observe the printer but not control the x,y,z access of the
+printhead from the control tab.
+3.  The ‘GCode’ tab functionality is the same since it is effectively
+read only.
+4.  The terminal tab will still reflect the exchange of G-Code and
+response, but you will not be able to send adhoc G-Code to the printer
+unless authenticated.
+5.  The timelapse tab will allow you to download data, but you will not
+be able to upload, slice or print a file.
+
+Screen shot of the tabs referenced above
+
+The process
+-----------
+
+The process for printing a file can be quite easy. The directions are
+found in the next 5 sections. If you are already logged in and connected
+to the printer, it becomes a 3 step process: upload, slice and print.
+
+1.  Login
+2.  Connect to the printer
+3.  Upload a File
+4.  Slice a File
+5.  Print a File
+
+The Tabs
+--------
+
+The tab section of the screen gives you fast access to basic printer
+control, monitoring and video recording. In addition, some plugins add
+to this list and are reached using the widget on the right side of the
+tab rack.
+
+Also, no matter which tab you navigate to, you will have access to the
+left panel where you can upload, slice and print files as well as
+control whether the machine is connected.
+
+System
+------
+
+Sometimes it is necessary to restart or shutdown if things are not
+working as expected.  Restarting and shutting down Octoprint is done
+through the System menu.  There are 3 options:
+
+1.  Restart OctoPrint - This does not restart the entire system, instead
+it just restarts the services that Octoprint uses to host the
+application.
+2.  Reboot - This will restart the entire Raspberry Pi and reset the
+operating system as well as Octoprint
+3.  Shutdown - This will turn the Raspberry Pi off completely
+
+Tips and tricks
+---------------
+
+1.  The Rostock bed heats up slowly. It is a good idea to set the
+temperature from the temperature tab. Select the temperature appropriate
+for the material.
+
+1.  Octoprint is quite capable. It’s worth spending some time to
+understand and experiment with the settings.
+2.  Octoprint’s interface is sometimes a little slow and bad at
+refreshing content.  Refresh your browser page if you appear to randomly
+lose access.
+3.  When two or more people try to manage the printer simultaneously,
+Octoprint does not do a good job of knowing which person has the
+control.  Ensure you are not attempting to simultaneously control the
+printer when someone else is using it.
+4.  If you want to capture timelapse pictures of your print for review
+later, you must set the timelapse before you start your print.
+5.  The Terminal tab can be very useful if you need to level the print
+bed as you can issue commands to move the nozzle and check level at
+various points across the bed.
+
+Settings
+--------
+
+Warning: Settings is for more advanced users.  The average person can
+skip this section.  
+
+For those who wish to add profiles, control the printer settings, or add
+advanced GCode processing, Settings is where these are handled.  There
+are several configuration elements on the left side, they are as
+follows:
+
+1.  Printer Section: All things related to the printer itself
+2.  Features: Control special features such as the webcam or connection
+options
+3.  Octoprint: Configurations for the Octoprint application itself
+4.  Plugins: Additional management of plugins
+
+Resources
+---------
+
+1.  https://www.youtube.com/watch?v=MwsxO3ksxm4[Getting started with
+OctoPrint on the Raspberry Pi 2! (2016 version)] by
+https://www.youtube.com/channel/UCb8Rde3uRL1ohROUVg46h1A[Thomas
+Sanladerer]
+2.  http://octoprint.org/slides/os3dc/#/[Slideshow: '3D printing
+unchained'] by http://foosel.org/+[ Gina Häußge]
+3.  https://octopi.octoprint.org/latest[Latest Octopi]
+4.  http://github.com/foosel/OctoPrint[Github source]
+5.  http://reprap.org/wiki/G-code[RepRap G-Code list]
