@@ -1,4 +1,7 @@
-Intro to Octoprint
+:imagesdir: ./images
+:toc: macro
+
+= Intro to Octoprint
 
 Table of Contents
 ------------------
