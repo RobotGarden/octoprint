@@ -1,68 +1,9 @@
 :imagesdir: ./images
 :toc: macro
 
+toc::[]
+
 = Intro to Octoprint
-
-Table of Contents
-------------------
-
-Table of Contents
-
-https://docs.google.com/document/d/1BvekENfLcxNv5ugeOjR9vivC2mzZPTj49KXYmFxOHXw/edit#heading=h.bcd2kq4e65ab[Table
-of Contents]
-
-https://docs.google.com/document/d/1BvekENfLcxNv5ugeOjR9vivC2mzZPTj49KXYmFxOHXw/edit#heading=h.us9fxtfd2e40[License]
-
-https://docs.google.com/document/d/1BvekENfLcxNv5ugeOjR9vivC2mzZPTj49KXYmFxOHXw/edit#heading=h.tp7l56s10c9l[Document
-History]
-
-https://docs.google.com/document/d/1BvekENfLcxNv5ugeOjR9vivC2mzZPTj49KXYmFxOHXw/edit#heading=h.bwmlkp82074c[What
-do we hope to accomplish?]
-
-https://docs.google.com/document/d/1BvekENfLcxNv5ugeOjR9vivC2mzZPTj49KXYmFxOHXw/edit#heading=h.qyaswqaq81kn[What
-is Octoprint?]
-
-https://docs.google.com/document/d/1BvekENfLcxNv5ugeOjR9vivC2mzZPTj49KXYmFxOHXw/edit#heading=h.zd6uxsyjm0qp[Authenticated
-v. Unauthenticated]
-
-https://docs.google.com/document/d/1BvekENfLcxNv5ugeOjR9vivC2mzZPTj49KXYmFxOHXw/edit#heading=h.yoisfxw72s60[The
-process]
-
-https://docs.google.com/document/d/1BvekENfLcxNv5ugeOjR9vivC2mzZPTj49KXYmFxOHXw/edit#heading=h.1lk0j73ocgcr[Login]
-
-https://docs.google.com/document/d/1BvekENfLcxNv5ugeOjR9vivC2mzZPTj49KXYmFxOHXw/edit#heading=h.z5ze1ucyedc0[Upload
-a File]
-
-https://docs.google.com/document/d/1BvekENfLcxNv5ugeOjR9vivC2mzZPTj49KXYmFxOHXw/edit#heading=h.5c2goygnf1h4[Slice
-a File]
-
-https://docs.google.com/document/d/1BvekENfLcxNv5ugeOjR9vivC2mzZPTj49KXYmFxOHXw/edit#heading=h.hu2f6hwj824h[Print
-a File]
-
-https://docs.google.com/document/d/1BvekENfLcxNv5ugeOjR9vivC2mzZPTj49KXYmFxOHXw/edit#heading=h.nlu7u971wrta[The
-Tabs]
-
-https://docs.google.com/document/d/1BvekENfLcxNv5ugeOjR9vivC2mzZPTj49KXYmFxOHXw/edit#heading=h.5r3d0npoa7gx[Temperature
-control]
-
-https://docs.google.com/document/d/1BvekENfLcxNv5ugeOjR9vivC2mzZPTj49KXYmFxOHXw/edit#heading=h.st8ro1739obd[Printer
-Controlling]
-
-https://docs.google.com/document/d/1BvekENfLcxNv5ugeOjR9vivC2mzZPTj49KXYmFxOHXw/edit#heading=h.tntyw7p1gv3d[GCode
-Viewer]
-
-https://docs.google.com/document/d/1BvekENfLcxNv5ugeOjR9vivC2mzZPTj49KXYmFxOHXw/edit#heading=h.tntyw7p1gv3d[Terminal]
-
-https://docs.google.com/document/d/1BvekENfLcxNv5ugeOjR9vivC2mzZPTj49KXYmFxOHXw/edit#heading=h.tntyw7p1gv3d[Timelapse]
-
-https://docs.google.com/document/d/1BvekENfLcxNv5ugeOjR9vivC2mzZPTj49KXYmFxOHXw/edit#heading=h.e32sv3joliny[Settings]
-
-https://docs.google.com/document/d/1BvekENfLcxNv5ugeOjR9vivC2mzZPTj49KXYmFxOHXw/edit#heading=h.95c17ypej4kx[System]
-
-https://docs.google.com/document/d/1BvekENfLcxNv5ugeOjR9vivC2mzZPTj49KXYmFxOHXw/edit#heading=h.nm7ew6r8r0s[Tips
-and tricks]
-
-https://docs.google.com/document/d/1BvekENfLcxNv5ugeOjR9vivC2mzZPTj49KXYmFxOHXw/edit#heading=h.zfw1ppls9db9[Resources]
 
 License
 -------
