@@ -75,7 +75,7 @@ but you will not be able to send adhoc G-Code to the printer unless authenticate
 be able to upload, slice or print a file.
 
 Screen shot of the tabs referenced above
-image::alltabs.jpg[All tabs]
+image::alltabs.png[All tabs]
 
 The process
 -----------
