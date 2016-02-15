@@ -1,12 +1,11 @@
 :imagesdir: ./images
 :toc: macro
 
-toc::[]
-
 = Intro to Octoprint
 
-License
--------
+toc::[]
+
+== License
 
 The materials for this class are licensed under the Apache license. See
 the file LICENSE for details.
@@ -24,8 +23,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 
-Document History
-----------------
+== Document History
 
 [cols=",",]
 |==================================
@@ -39,8 +37,7 @@ Add tabs outline.
  |2016-02-01
 |==================================
 
-What do we hope to accomplish?
-------------------------------
+= What do we hope to accomplish?
 
 * Learn a little about what octoprint is and what you can do with it.
 * Learn how to upload a file
@@ -54,14 +51,13 @@ What do we hope to accomplish?
 * Settings
 * Resources
 
-What is Octoprint?
-------------------
+= What is Octoprint?
+
 
 Octoprint is a web interface for a 3D printer. Octoprint makes it easy
 to use a 3D printer. It is FOSSware or free open source software.
 
-Authenticated v. Unauthenticated
---------------------------------
+= Authenticated v. Unauthenticated
 
 If you have not authenticated (logged in), your abilities with Octoprint
 will be limited. You can:
@@ -78,21 +74,65 @@ Screen shot of the tabs referenced above
 
 image::alltabs.jpg[All tabs]
 
-The process
------------
+= The process
 
 The process for printing a file can be quite easy. The directions are
 found in the next 5 sections. If you are already logged in and connected
 to the printer, it becomes a 3 step process: upload, slice and print.
 
-1.  Login
-2.  Connect to the printer
-3.  Upload a File
-4.  Slice a File
-5.  Print a File
+* Login
+* Connect to the printer
+* Upload a File
+* Slice a File
+* Print a File
 
-The Tabs
---------
+== Login
+
+image::login.jpg[Login]
+
+You must login/be authenticated to print. 
+Click the login button at the top right of the screen. 
+Fill out the username and password, then press the Login button.  
+If you don’t know the username or password, see a Marshal.
+
+== Connect to the Printer
+
+image::connect_to_printer.jpg[Connect to printer]
+
+Connection is controlled by the connection popdown, at the top left of the screen. Values:
+ * Serial Port: /dev/ttyACM0
+ * Baud Rate: 250000. That’s 250,000 but with no comma.
+ * Printer Profile: Fill in and correct image
+ * Save and Auto-connect: you can check these if so desired.
+ * Connect button: when these are set appropriately, press connect.
+
+For troubleshooting, see link:https://github.com/foosel/OctoPrint/wiki/FAQ#i-cant-get-octoprint-to-connect-to-my-printer
+[Octoprint’s documentation] as well.
+
+== Upload a File
+
+image::upload_file.jpg[Upload a file]
+
+To perform operations related to printing you must be authenticated (logged in). 
+You can only upload STL or G-Code files. Typically STL files have the extension .stl and G-code files 
+have either the .gco or .gcode extension. 
+Click one of the upload buttons found on the left of the screen - see image below. 
+Upload transfers the file to the Pi, while Upload to SD transfers the file to the printer’s SD card. 
+
+Alternately you can drag and drop a file to the browser screen. 
+ * Dropping on the left transfers the file to the Pi 
+ * Dropping on the right transfers the file to the printer’s SD card.
+
+You can also download files from the list of files if you’d like.
+
+== Slice a File
+Slicing turns STL files into G-Code files. 
+If you have a previously sliced G-Code file and have already uploaded the file you can skip this step. 
+
+To slice a file in Octoprint, click the magic wand tool to bring up the slicing dialog.
+
+
+= The Tabs
 
 The tab section of the screen gives you fast access to basic printer
 control, monitoring and video recording. In addition, some plugins add
@@ -103,8 +143,7 @@ Also, no matter which tab you navigate to, you will have access to the
 left panel where you can upload, slice and print files as well as
 control whether the machine is connected.
 
-System
-------
+== System
 
 Sometimes it is necessary to restart or shutdown if things are not
 working as expected.  Restarting and shutting down Octoprint is done
