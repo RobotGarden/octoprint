@@ -69,13 +69,13 @@ will be limited. You can:
 * Observe but not set bed and nozzle temperatures from the temperature tab.
 * Observe the printer but not control the x,y,z access of the printhead from the control tab.
 * The ‘GCode’ tab functionality is the same since it is effectively read only.
-* The terminal tab will still reflect the exchange of G-Code and 
-response, but you will not be able to send adhoc G-Code to the printer
-unless authenticated.
+* The terminal tab will still reflect the exchange of G-Code and response, 
+but you will not be able to send adhoc G-Code to the printer unless authenticated.
 * The timelapse tab will allow you to download data, but you will not
 be able to upload, slice or print a file.
 
 Screen shot of the tabs referenced above
+image::alltabs.jpg[All tabs]
 
 The process
 -----------
