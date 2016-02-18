@@ -92,7 +92,7 @@ image::login.jpg[Login]
 
 You must login/be authenticated to print. 
 Click the login button at the top right of the screen. 
-Fill out the username and password, then press the Login button.  
+Fill out the *username* and *password*, then press the *Login* button.  
 If you don’t know the username or password, see a Marshal.
 
 == Connect to the Printer
@@ -100,24 +100,26 @@ If you don’t know the username or password, see a Marshal.
 image::connect_to_printer.jpg[Connect to printer]
 
 Connection is controlled by the connection popdown, at the top left of the screen. Values:
- * Serial Port: /dev/ttyACM0
- * Baud Rate: 250000. That’s 250,000 but with no comma.
- * Printer Profile: Fill in and correct image
- * Save and Auto-connect: you can check these if so desired.
- * Connect button: when these are set appropriately, press connect.
+[%hardbreaks]
+ * *Serial Port*: /dev/ttyACM0
+ * *Baud Rate*: 250000. That’s 250,000 but with no comma.
+ * *Printer Profile*: Fill in and correct image
+ * *Save and Auto-connect*: you can check these if so desired.
+ * *Connect button*: when these are set appropriately, press connect.
 
-For troubleshooting, see link:https://github.com/foosel/OctoPrint/wiki/FAQ#i-cant-get-octoprint-to-connect-to-my-printer
-[Octoprint’s documentation] as well.
+For troubleshooting, see 
+https://github.com/foosel/OctoPrint/wiki/FAQ#i-cant-get-octoprint-to-connect-to-my-printer[Octoprint’s documentation]
+as well.
 
 == Upload a File
 
 image::upload_file.jpg[Upload a file]
 
 To perform operations related to printing you must be authenticated (logged in). 
-You can only upload STL or G-Code files. Typically STL files have the extension .stl and G-code files 
-have either the .gco or .gcode extension. 
+You can only upload <u>*STL*<u> or <u>*G-Code*<u> files. Typically STL files have the extension <u>*.stl*<u> and G-code files 
+have either the <u>*.gco*<u> or <u>*.gcode*<u> extension. 
 Click one of the upload buttons found on the left of the screen - see image below. 
-Upload transfers the file to the Pi, while Upload to SD transfers the file to the printer’s SD card. 
+<u>*Upload*<u> transfers the file to the Pi, while <u>*Upload to SD*<u> transfers the file to the printer’s SD card. 
 
 Alternately you can drag and drop a file to the browser screen. 
  * Dropping on the left transfers the file to the Pi 
