@@ -15,7 +15,7 @@ Copyright 2016 F Douthit
 Licensed under the Apache License, Version 2.0 (the "License"); you may
 not use this file except in compliance with the License. You may obtain
 a copy of the License
-athttp://www.apache.org/licenses/LICENSE-2.0[]http://www.apache.org/licenses/LICENSE-2.0.
+at http://www.apache.org/licenses/LICENSE-2.0.
 
 Unless required by applicable law or agreed to in writing, software
 distributed under the License is distributed on an "AS IS" BASIS,
@@ -160,6 +160,7 @@ If you click load you will have to click the print button in the state dialog in
  * Start the print by pressing the *print button*
 [%hardbreaks]
 image::pause_resume_cancel.jpg[Resume Cancel]
+[%hardbreaks]
  * Pause a print by pressing the *pause button*. The buttons change to *Restart*, *Resume* or *Cancel*.  Note that when you pause, sometimes GCode is already in flight and it may take a moment to pause.
  * Cancel a print by pressing the cancel button.  Note that when you cancel, sometimes GCode is already in flight and it may take a moment to pause.
 
@@ -167,10 +168,7 @@ image::pause_resume_cancel.jpg[Resume Cancel]
 = The Tabs
 image::tabs.jpg[All Tabs]
 [%hardbreaks]
-The tab section of the screen gives you fast access to basic printer
-control, monitoring and video recording. In addition, some plugins add
-to this list and are reached using the widget on the right side of the
-tab rack.
+The tab section of the screen gives you fast access to basic printer control, monitoring and video recording. In addition, some plugins add to this list and are reached using the widget on the right side of the tab rack.
 
 Also, no matter which tab you navigate to, you will have access to the
 left panel where you can upload, slice and print files as well as
@@ -190,8 +188,8 @@ image::control_tab.jpg[Printer Control Tab]
 [%hardbreaks]
 This tab serves two main purposes:
 [%hardbreaks]
- * Controlling the printer: Here you can home the towers, move the hot end x, y and z a set distance, turn motors and fans on or off, extrude or withdraw filament (be sure the hot end is heated for this), or even control flow and feed rates.  This tab is helpful when levelling the bed or replacing filament especially.
- * Watching the print: We have a small webcam on the printer pointed at the bed for you - from this tab you can watch that camera real time whether or not you’re printing.
+ * *Controlling the printer*: Here you can home the towers, move the hot end x, y and z a set distance, turn motors and fans on or off, extrude or withdraw filament (be sure the hot end is heated for this), or even control flow and feed rates.  This tab is helpful when levelling the bed or replacing filament especially.
+ * *Watching the print*: We have a small webcam on the printer pointed at the bed for you - from this tab you can watch that camera real time whether or not you’re printing.
 
 == GCode Viewer
 image::gcode_viewer_tab.jpg[GCode Viewer Tab]
@@ -213,19 +211,17 @@ There is one additional unique option here under the Advanced options twist at t
 
 == Timelapse
 
-== System
+= System
 image::system_dropdown.jpg[System Screen]
 [%hardbreaks]
-Sometimes it is necessary to restart or shutdown if things are not
-working as expected.  Restarting and shutting down Octoprint is done
-through the System menu.  There are 3 options:
+Sometimes it is necessary to restart or shutdown if things are not working as expected.  Restarting and shutting down Octoprint is done through the System menu.  There are 3 options:
 [%hardbreaks]
- * Restart OctoPrint - This does not restart the entire system, instead
+ * *Restart OctoPrint*: This does not restart the entire system, instead
 it just restarts the services that Octoprint uses to host the
 application.
- * Reboot - This will restart the entire Raspberry Pi and reset the
+ * *Reboot*: This will restart the entire Raspberry Pi and reset the
 operating system as well as Octoprint
- * Shutdown - This will turn the Raspberry Pi off completely
+ * *Shutdown*: This will turn the Raspberry Pi off completely
 
 = Tips and tricks
 [%hardbreaks]
@@ -252,8 +248,7 @@ various points across the bed.
 = Settings
 [%hardbreaks]
 image::settings_screen.jpg[Settings Screen]
-[red]Warning: Settings is for more advanced users.  The average person can
-skip this section.  
+[red]*Warning: Settings is for more advanced users. The average person can skip this section.*
 
 For those who wish to add profiles, control the printer settings, or add
 advanced GCode processing, Settings is where these are handled.  There
