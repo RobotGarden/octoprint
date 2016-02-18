@@ -129,14 +129,14 @@ Alternately you can drag and drop a file to the browser screen.
 You can also download files from the list of files if you’d like.
 
 == Slice a File
-image::slice_a_file.jpg[Upload a file]
+image::slice_a_file.jpg[Slice a file]
 [%hardbreaks]
 Slicing turns STL files into G-Code files. 
 If you have a previously sliced G-Code file and have already uploaded the file you can skip this step. 
 
 To slice a file in Octoprint, click the magic wand tool to bring up the pass:q[<u>*slicing dialog*</u>].
 [%hardbreaks]
-image::pick_slicing_profile.jpg[Upload a file]
+image::pick_slicing_profile.jpg[Picking a slice profile]
 
  * Select the Slicer. Currently we ONLY have the CuraEngine installed to slice the model.
  * Select the profile. Profiles are a collection of settings for the given slicer. We’ve named them for *filament material*, *quality* and whether they provide *lattice support*. 
@@ -149,22 +149,24 @@ image::pick_slicing_profile.jpg[Upload a file]
 
 
 == Print a File
-image::print_a_file.jpg[Upload a file]
+image::print_a_file.jpg[Print a file]
 [%hardbreaks]
 Once you have a G-Code file you are ready to print. Click the folder icon to load the file or the printer icon to load AND print the file immediately.
 
-image::state.jpg[Upload a file]
+image::state.jpg[Print State]
 [%hardbreaks]
 If you click load you will have to click the print button in the state dialog in order to start the print. 
+[%hardbreaks]
  * Start the print by pressing the *print button*
 [%hardbreaks]
-image::pause_resume_cancel.jpg[Upload a file]
+image::pause_resume_cancel.jpg[Resume Cancel]
  * Pause a print by pressing the *pause button*. The buttons change to *Restart*, *Resume* or *Cancel*.  Note that when you pause, sometimes GCode is already in flight and it may take a moment to pause.
  * Cancel a print by pressing the cancel button.  Note that when you cancel, sometimes GCode is already in flight and it may take a moment to pause.
 
 
 = The Tabs
-
+image::tabs.jpg[All Tabs]
+[%hardbreaks]
 The tab section of the screen gives you fast access to basic printer
 control, monitoring and video recording. In addition, some plugins add
 to this list and are reached using the widget on the right side of the
@@ -174,45 +176,83 @@ Also, no matter which tab you navigate to, you will have access to the
 left panel where you can upload, slice and print files as well as
 control whether the machine is connected.
 
-== System
+== Temperature control
+image::set_temperatures.jpg[Set Temperature]
+[%hardbreaks]
+From this tab you can monitor bed and hot end temperature.  As indicated on the screen, hot end is T and Bed is Bed.  There are both the actual value as well as the target - target is the pale version of the color.  It’s often a good idea to heat the bed prior to sending a print since the bed takes much longer than the hot end to heat up. 
 
+To do so, simply enter target values in celsius and press the set button.  Typical settings for PLA are 185 for the hot end and 60 for the bed.
+
+You can also set Offset values for the temperatures - this is very uncommon, but would be used in cases where your printer has a temperature offset value or where you might be using an exotic material such as laywood and are looking for temperature variability to mimic the appearance of wood variations.
+
+== Printer Control
+image::control_tab.jpg[Printer Control Tab]
+[%hardbreaks]
+This tab serves two main purposes:
+[%hardbreaks]
+ * Controlling the printer: Here you can home the towers, move the hot end x, y and z a set distance, turn motors and fans on or off, extrude or withdraw filament (be sure the hot end is heated for this), or even control flow and feed rates.  This tab is helpful when levelling the bed or replacing filament especially.
+ * Watching the print: We have a small webcam on the printer pointed at the bed for you - from this tab you can watch that camera real time whether or not you’re printing.
+
+== GCode Viewer
+image::gcode_viewer_tab.jpg[GCode Viewer Tab]
+[%hardbreaks]
+The GCode Viewer page gives you realtime visual representation of the gcode as it’s executing on the printer but it can also be used to “walk” the GCode.  To see an individual layer progress, drag the scroll bar on the bottom towards the right - to see a progression of layers, drag the scroll bar on the right side up.
+
+You can also control the behavior of the visualization from this tab and see information about how much code and filament is used by any layer.
+
+== Terminal
+image::terminal_tab.jpg[Terminal Tab]
+[%hardbreaks]
+The terminal tab is a useful place to review GCode being sent to the printer, but it can also be a good place to send individual GCode commands.  For example, what if after homing the towers you want to go to X100 Y100 and Z0 on your printer explicitly for levelling purposes.  This is where you could issue the GCode command directly.
+
+In addition there are a few options to suppress certain “noisy” commands and enable or disable autoscroll
+
+image::fake_acknowledgement.jpg[Fake ACK]
+[%hardbreaks]
+There is one additional unique option here under the Advanced options twist at the bottom - The Fake Acknowledgement.  This is something you won’t likely need, but if for some reason communication to the printer appears to have been lost, issuing a Fake Acknowledgement may restore the connection.
+
+== Timelapse
+
+== System
+image::system_dropdown.jpg[System Screen]
+[%hardbreaks]
 Sometimes it is necessary to restart or shutdown if things are not
 working as expected.  Restarting and shutting down Octoprint is done
 through the System menu.  There are 3 options:
-
-1.  Restart OctoPrint - This does not restart the entire system, instead
+[%hardbreaks]
+ * Restart OctoPrint - This does not restart the entire system, instead
 it just restarts the services that Octoprint uses to host the
 application.
-2.  Reboot - This will restart the entire Raspberry Pi and reset the
+ * Reboot - This will restart the entire Raspberry Pi and reset the
 operating system as well as Octoprint
-3.  Shutdown - This will turn the Raspberry Pi off completely
+ * Shutdown - This will turn the Raspberry Pi off completely
 
-Tips and tricks
----------------
-
-1.  The Rostock bed heats up slowly. It is a good idea to set the
+= Tips and tricks
+[%hardbreaks]
+image::tips_temperature.jpg[Temperature Tip]
+[%hardbreaks]
+ * The Rostock bed heats up slowly. It is a good idea to set the
 temperature from the temperature tab. Select the temperature appropriate
 for the material.
-
-1.  Octoprint is quite capable. It’s worth spending some time to
+ * Octoprint is quite capable. It’s worth spending some time to
 understand and experiment with the settings.
-2.  Octoprint’s interface is sometimes a little slow and bad at
+ * Octoprint’s interface is sometimes a little slow and bad at
 refreshing content.  Refresh your browser page if you appear to randomly
 lose access.
-3.  When two or more people try to manage the printer simultaneously,
+ * When two or more people try to manage the printer simultaneously,
 Octoprint does not do a good job of knowing which person has the
 control.  Ensure you are not attempting to simultaneously control the
 printer when someone else is using it.
-4.  If you want to capture timelapse pictures of your print for review
+ * If you want to capture timelapse pictures of your print for review
 later, you must set the timelapse before you start your print.
-5.  The Terminal tab can be very useful if you need to level the print
+ * The Terminal tab can be very useful if you need to level the print
 bed as you can issue commands to move the nozzle and check level at
 various points across the bed.
 
-Settings
---------
-
-Warning: Settings is for more advanced users.  The average person can
+= Settings
+[%hardbreaks]
+image::settings_screen.jpg[Settings Screen]
+[red]Warning: Settings is for more advanced users.  The average person can
 skip this section.  
 
 For those who wish to add profiles, control the printer settings, or add
@@ -220,21 +260,36 @@ advanced GCode processing, Settings is where these are handled.  There
 are several configuration elements on the left side, they are as
 follows:
 
-1.  Printer Section: All things related to the printer itself
-2.  Features: Control special features such as the webcam or connection
-options
-3.  Octoprint: Configurations for the Octoprint application itself
-4.  Plugins: Additional management of plugins
+ * *Printer Section: All things related to the printer itself*
+  ** *Serial Connection*: This is where you can configure the serial port, baud rate, 
+how often to update the interface for Temperatures and even set timeout values
+  ** *Printer Profiles*: This is where a new printer can be created or any existing ones can get modified.  For instance, bed size is configured here.
+  ** *Temperatures*: This is where you can configure preferred temperatures for ABS and PLA for the printer
+  ** *Terminal Filters*: Sometimes the output in the terminal screen is too verbose, you can add filters here to keep it cleaner.
+  ** *GCode scripts*: If you have some custom GCode actions, this is where you can add your scripts.  A common example would be if you wanted to change color when pausing your print - you might want to after pause, raise the nozzle 20mm Z so that you can pull out the previous filament and insert the new, and then before resume, home the towers in case you knocked the head out of alignment.
+ * *Features: Control special features such as the webcam or connection options*
+  ** *Features*: Various options that can be turned on and off such as whether you want to see the temperature graph
+  ** *Webcam*: Options around the webcam such as where you can view timelapse output
+  ** *Access Control*: Where administration of users can be configured
+  ** *API*: For those wishing to programmatically interface with Octoprint, this is where the session specific key is to allow you to make API calls.
+ * *Octoprint: Configurations for the Octoprint application itself*
+  ** *Server*: Commands for shutdown and restart are configurable here
+  ** *Folders*: You can configure where to store logs and timelapse photos here.
+  ** *Appearance*: You can set custom colors, titles and language sets here
+  ** *Logs*: Review and delete log files
+  ** *Plugin Manager*: There are plugins for Octoprint - here is where you manage/install them.
+  ** *Software Update*: Download and install Octoprint updates
+ * *Plugins: Additional management of plugins*
+  ** *Cura Engine: You can manage Cura profiles for slicing here.
 
-Resources
----------
+= Resources
 
-1.  https://www.youtube.com/watch?v=MwsxO3ksxm4[Getting started with
+ * https://www.youtube.com/watch?v=MwsxO3ksxm4[Getting started with
 OctoPrint on the Raspberry Pi 2! (2016 version)] by
 https://www.youtube.com/channel/UCb8Rde3uRL1ohROUVg46h1A[Thomas
 Sanladerer]
-2.  http://octoprint.org/slides/os3dc/#/[Slideshow: '3D printing
+ * http://octoprint.org/slides/os3dc/#/[Slideshow: '3D printing
 unchained'] by http://foosel.org/+[ Gina Häußge]
-3.  https://octopi.octoprint.org/latest[Latest Octopi]
-4.  http://github.com/foosel/OctoPrint[Github source]
-5.  http://reprap.org/wiki/G-code[RepRap G-Code list]
+ * https://octopi.octoprint.org/latest[Latest Octopi]
+ * http://github.com/foosel/OctoPrint[Github source]
+ * http://reprap.org/wiki/G-code[RepRap G-Code list]
