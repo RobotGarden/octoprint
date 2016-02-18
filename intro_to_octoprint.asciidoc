@@ -116,12 +116,13 @@ as well.
 image::upload_file.jpg[Upload a file]
 
 To perform operations related to printing you must be authenticated (logged in). 
-You can only upload <u>*STL*<u> or <u>*G-Code*<u> files. Typically STL files have the extension <u>*.stl*<u> and G-code files 
+You can only upload +++<u>*STL*<u>+++ or <u>*G-Code*<u> files. Typically STL files have the extension <u>*.stl*<u> and G-code files 
 have either the <u>*.gco*<u> or <u>*.gcode*<u> extension. 
 Click one of the upload buttons found on the left of the screen - see image below. 
 <u>*Upload*<u> transfers the file to the Pi, while <u>*Upload to SD*<u> transfers the file to the printer’s SD card. 
 
 Alternately you can drag and drop a file to the browser screen. 
+[%hardbreaks]
  * Dropping on the left transfers the file to the Pi 
  * Dropping on the right transfers the file to the printer’s SD card.
 
@@ -132,6 +133,7 @@ Slicing turns STL files into G-Code files.
 If you have a previously sliced G-Code file and have already uploaded the file you can skip this step. 
 
 To slice a file in Octoprint, click the magic wand tool to bring up the slicing dialog.
+
 
 
 = The Tabs
