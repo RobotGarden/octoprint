@@ -153,6 +153,16 @@ image::print_a_file.jpg[Upload a file]
 [%hardbreaks]
 Once you have a G-Code file you are ready to print. Click the folder icon to load the file or the printer icon to load AND print the file immediately.
 
+image::state.jpg[Upload a file]
+[%hardbreaks]
+If you click load you will have to click the print button in the state dialog in order to start the print. 
+ * Start the print by pressing the *print button*
+[%hardbreaks]
+image::pause_resume_cancel.jpg[Upload a file]
+ * Pause a print by pressing the *pause button*. The buttons change to *Restart*, *Resume* or *Cancel*.  Note that when you pause, sometimes GCode is already in flight and it may take a moment to pause.
+ * Cancel a print by pressing the cancel button.  Note that when you cancel, sometimes GCode is already in flight and it may take a moment to pause.
+
+
 = The Tabs
 
 The tab section of the screen gives you fast access to basic printer
