@@ -158,11 +158,11 @@ image::state.jpg[Print State]
 If you click load you will have to click the print button in the state dialog in order to start the print. 
 [%hardbreaks]
  * Start the print by pressing the *print button*
-[%hardbreaks]
+
 image::pause_resume_cancel.jpg[Resume Cancel]
 [%hardbreaks]
  * Pause a print by pressing the *pause button*. The buttons change to *Restart*, *Resume* or *Cancel*.  Note that when you pause, sometimes GCode is already in flight and it may take a moment to pause.
- * Cancel a print by pressing the cancel button.  Note that when you cancel, sometimes GCode is already in flight and it may take a moment to pause.
+ * Cancel a print by pressing the *cancel button*.  Note that when you cancel, sometimes GCode is already in flight and it may take a moment to pause.
 
 
 = The Tabs
@@ -210,6 +210,8 @@ image::fake_acknowledgement.jpg[Fake ACK]
 There is one additional unique option here under the Advanced options twist at the bottom - The Fake Acknowledgement.  This is something you won’t likely need, but if for some reason communication to the printer appears to have been lost, issuing a Fake Acknowledgement may restore the connection.
 
 == Timelapse
+[%hardbreaks]
+This tab allows you to record to video the printing process. *Timelapse Mode* must be set to one of the settings other than *Off* before starting the print if you wish to record a video.
 
 = System
 image::system_dropdown.jpg[System Screen]
@@ -275,7 +277,7 @@ how often to update the interface for Temperatures and even set timeout values
   ** *Plugin Manager*: There are plugins for Octoprint - here is where you manage/install them.
   ** *Software Update*: Download and install Octoprint updates
  * *Plugins: Additional management of plugins*
-  ** *Cura Engine: You can manage Cura profiles for slicing here.
+  ** *Cura Engine*: You can manage Cura profiles for slicing here.
 
 = Resources
 
