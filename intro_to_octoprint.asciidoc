@@ -115,6 +115,8 @@ as well.
 
 image::upload_file.jpg[Upload a file]
 
+Test pass:q[<u>underline *me*</u>] end test. Test2 pass:q[<u>*underline me*</u>] end test.
+
 To perform operations related to printing you must be authenticated (logged in). 
 You can only upload [underline]#*STL*# or <u>*G-Code*<u> files. Typically STL files have the extension <u>*.stl*<u> and G-code files 
 have either the <u>*.gco*<u> or <u>*.gcode*<u> extension. 
