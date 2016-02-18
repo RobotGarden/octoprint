@@ -135,6 +135,7 @@ Slicing turns STL files into G-Code files.
 If you have a previously sliced G-Code file and have already uploaded the file you can skip this step. 
 
 To slice a file in Octoprint, click the magic wand tool to bring up the pass:q[<u>*slicing dialog*</u>].
+[%hardbreaks]
 image::pick_slicing_profile.jpg[Upload a file]
 
  * Select the Slicer. Currently we ONLY have the CuraEngine installed to slice the model.
