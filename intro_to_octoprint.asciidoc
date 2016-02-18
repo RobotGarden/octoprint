@@ -115,13 +115,11 @@ as well.
 
 image::upload_file.jpg[Upload a file]
 
-Test pass:q[<u>underline *me*</u>] end test. Test2 pass:q[<u>*underline me*</u>] end test.
-
 To perform operations related to printing you must be authenticated (logged in). 
-You can only upload [underline]#*STL*# or <u>*G-Code*<u> files. Typically STL files have the extension <u>*.stl*<u> and G-code files 
-have either the <u>*.gco*<u> or <u>*.gcode*<u> extension. 
+You can only upload pass:q[<u>*STL*</u>] or pass:q[<u>*G-Code*</u>] files. Typically STL files have the extension pass:q[<u>*.stl*</u>] and G-code files 
+have either the pass:q[<u>*.gco*</u>] or pass:q[<u>*.gcode*</u>] extension. 
 Click one of the upload buttons found on the left of the screen - see image below. 
-<u>*Upload*<u> transfers the file to the Pi, while <u>*Upload to SD*<u> transfers the file to the printer’s SD card. 
+pass:q[<u>*Upload*</u>] transfers the file to the Pi, while pass:q[<u>*Upload to SD*</u>] transfers the file to the printer’s SD card. 
 
 Alternately you can drag and drop a file to the browser screen. 
 [%hardbreaks]
@@ -131,12 +129,28 @@ Alternately you can drag and drop a file to the browser screen.
 You can also download files from the list of files if you’d like.
 
 == Slice a File
+image::slice_a_file.jpg[Upload a file]
+[%hardbreaks]
 Slicing turns STL files into G-Code files. 
 If you have a previously sliced G-Code file and have already uploaded the file you can skip this step. 
 
-To slice a file in Octoprint, click the magic wand tool to bring up the slicing dialog.
+To slice a file in Octoprint, click the magic wand tool to bring up the pass:q[<u>*slicing dialog*</u>].
+image::pick_slicing_profile.jpg[Upload a file]
+
+ * Select the Slicer. Currently we ONLY have the CuraEngine installed to slice the model.
+ * Select the profile. Profiles are a collection of settings for the given slicer. We’ve named them for *filament material*, *quality* and whether they provide *lattice support*. 
+ ** *Filament material* is the actual type of material used to print the part. Among other considerations, this controls head and bed temperature and it is important to pick the correct one.
+ ** The *quality* will control how much infill or how dense the print is. Most parts will do fine with fast (low in fill) or medium (~50% infill). 
+ ** *Lattice Support* is used to allow hollow spaces or overhangs greater than a 60 degree angle to be printed successfully.
+ * *Printer profile* should default correctly as we are connecting to a single printer.
+ * *GCode Filename* is the name of the file once slicing is complete. It is a good idea to include some indication of *filament material*, *quality* and *lattice support* in the name so that in the future you will know what that is.
+ * *After Slicing...* Options include: can do nothing, load the file for printing and even start the print. This example will assume we picked *Do nothing*.
 
 
+== Print a File
+image::print_a_file.jpg[Upload a file]
+[%hardbreaks]
+Once you have a G-Code file you are ready to print. Click the folder icon to load the file or the printer icon to load AND print the file immediately.
 
 = The Tabs
 
