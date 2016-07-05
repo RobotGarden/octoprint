@@ -21,4 +21,13 @@ limitations under the License.
 == Description
 These are the basic sliding profiles we've created for our Rostock MAX (not V2). Use at your own risk.
 
-==
+== New Profiles 2016-07
+
+These new profiles were created by comparing the output of Matter Control with the output of Cura and tweaking the Cura profiles to more closely emulate the Matter Control settings.
+
+`PLA_high-quality_Rostock_cura.ini`:: 0.1 mm layer height
+
+`PLA_high-speed_Rostock_cura.ini`:: 0.2 mm layer height
+
+`PLA_medium-quality_Rostock_cura.ini`:: 0.3 mm layer height, with 105% flow rate
+
