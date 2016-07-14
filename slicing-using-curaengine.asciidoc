@@ -1,0 +1,138 @@
+= Slicing Using CuraEngine
+
+Octoprint uses link:https://github.com/Ultimaker/CuraEngine[CuraEngine] to slice STL files into GCode.
+CuraEngine is a C++ rewrite of an older, Python-based Cura slicer. During the rewrite, all the settings
+changed their names. Most front-ends to CuraEngine, like OctoPrint and Cura (the Cura GUI) still use the
+older Cura `.ini` file format for their profiles and then convert on-the-fly to the newer CuraEngine JSON
+format when calling CuraEngine.
+
+Octoprint also uses JSON format for uploading and downloading slicer profiles from the web API. However,
+that is a different JSON format from the one CuraEngine uses. Octoprint's JSON format is a pretty
+straightforward translation of the Cura `.ini` format to JSON.
+
+== Comparison of Cura and CuraEngine Settings
+
+Note: units are units of CuraEngine setting, not necessarily the same as Cura `.ini` setting.
+
+.Comparison of settings
+[options="header"]
+|===
+| Cura `.ini` setting | CuraEngine setting | Meaning
+| nozzle_size | nozzleSize | Nozzle diameter, in mm
+| layer_height | layerThickness | Height of each layer, in microns
+| bottom_thickness | initialLayerThickness | Height of first layer, in microns
+| filament_diameter | filamentDiameter | Diameter of filament, in microns
+| filament_flow | filamentFlow | Percent of calculated filament flow to extrude
+| first_layer_width_factor | layer0extrusionWidth | Extrusion width for first layer, in microns. (Cura setting is a factor of normal width.)
+| N/A? | extrusionWidth | Width of extruded line, in microns (calculated in Octoprint based on nozzle_size and wall_thickness)
+| N/A? | insetCount | Number of perimeters (calculated in Octoprint based on nozzle_size and wall_thickness)
+| solid_bottom, solid_layer_thickness | downSkinCount | Number of bottom solid layers (calculated in octoprint based on solid_layer_thickness and layer_height, if solid_bottom is true)
+| solid_top, solid_layer_thickness | upSkinCount | Number of top solid layers (calculated in octoprint based on solid_layer_thickness and layer_height, if solid_top is true)
+| platform_adhesion, skirt_gap | skirtDistance | Distance of skirt from model (if zero, use a brim instead; calculated in Octoprint from platform_adhesion type)
+| brim_line_count, skirt_line_count | skirtLineCount | Number of skirt perimeters
+| skirt_minimal_length | skirtMinLength | Minimum skirt extrusion length (unused if adhesion type is brim)
+| N/A | initialSpeedupLayers | Number of layers over which to ramp up print speed (set to 4 by Octoprint)
+| bottom_layer_speed | initialLayerSpeed | Print speed for first layer
+| print_speed | printSpeed | Basic print speed
+| outer_shell_speed | inset0Speed | Print speed for outer perimeter (defaults to print_speed if set to zero)
+| inner_shell_speed | insetXSpeed | Print speed for additional perimeters (defaults to print_speed if set to zero)
+| travel_speed | moveSpeed | Speed for non-print moves
+| fan_full_height | fanFullOnLayerNr | Layer number at which fan should be full speed (calculated in Octoprint from fan_full_height and layer_height)
+| fill_density | sparseInfillLineDistance | Distance between infill lines, in microns (calculated in Octoprint from fill_density and extrusion width)
+| fill_overlap | infillOverlap | Amount of overlap between infill and perimeters
+| infill_speed | infillSpeed | Speed when printing infill (defaults to print_speed if set to zero)
+| N/A | infillPattern | Pattern for infill (Octoprint leaves this unset for CuraEngine; default is cross-hatch)
+| ??? | skinSpeed | ??? (Octoprint leaves this unset)
+| ??? | perimeterBeforeInfill | ???
+| support_type | supportType | Type of support (1=lines; otherwise Octoprint leaves this at CuraEngine default (=grid?))
+| support_angle | supportAngle | Min angle when support required (only set if _support_ is nonzero)
+| support | supportEverywhere | Whether to provide support (Octoprint only allows 0 or 1, even though Cura .ini has more settings).
+| support_fill_rate | supportLineDistance | Distance between support lines, in microns (calculated in Octoprint from support_fill_rate and extrusion width)
+| support_xy_distance | supportXYDistance | Horizontal distance to support, in microns
+| supportZDistance | supportZDistance | Vertical distance to support, in microns
+| support_dual_extrusion | supportExtruder | Extruder to use for support (always 0 for single-extruder machines)
+| retraction_amount | retractionAmount | Retraction amount, in microns
+| ??? | retractionAmountPrime | ???
+| retraction_speed | retractionSpeed | Retraction speed 
+| ??? | retractionAmountExtruderSwitch | ???
+| retraction_min_travel | retractionMinimalDistance | Minimum travel before retract, in microns
+| ??? | minimalExtrusionBeforeRetraction | ???
+| retraction_hop | retractionZHop | Amount of head Z movement when retracting, in microns
+| retraction_combing | enableCombing | Whether to use combing (0=no, 1=all, 2=no skin)
+| ??? | enableOozeShield | ???
+| ??? | wipeTowerSize | ???
+| ??? | multiVolumeOverlap | ???
+| ??? | objectPosition.X | ???
+| ??? | posx | Same as _objectPosition.X_
+| ??? | objectPosition.Y | ???
+| ??? | posy | Same as _objectPosition.Y_
+| ??? | objectSink | ???
+| ??? | autoCenter | ???
+| ??? | raftMargin | ???
+| ??? | raftLineSpacing | ???
+| ??? | raftBaseThickness | ???
+| ??? | raftBaseLinewidth | ???
+| ??? | raftInterfaceThickness | ???
+| ??? | raftInterfaceLinewidth | ???
+| ??? | raftInterfaceLineSpacing | ???
+| ??? | raftAirGap | ???
+| ??? | raftAirGapLayer0 | ???
+| ??? | raftBaseSpeed | ???
+| ??? | raftFanSpeed | ???
+| ??? | raftSurfaceThickness | ???
+| ??? | raftSurfaceLinewidth | ???
+| ??? | raftSurfaceLineSpacing | ???
+| ??? | raftSurfaceLayers | ???
+| ??? | raftSurfaceSpeed | ???
+| ??? | minimalLayerTime | ???
+| ??? | minimalFeedrate | ???
+| ??? | coolHeadLift | ???
+| ??? | fanSpeedMin | ???
+| ??? | fanSpeedMax | ???
+| ??? | fixHorrible | ???
+| ??? | spiralizeMode | ???
+| ??? | simpleMode | ???
+| ??? | gcodeFlavor | ???
+| ??? | extruderOffset[0].X | Extruder 0 X offset from head center
+| ??? | extruderOffset[0].Y | Extruder 0 Y offset from head center
+| ??? | extruderOffset[1].X | etc.
+| ??? | extruderOffset[1].Y | 
+| ??? | extruderOffset[2].X | 
+| ??? | extruderOffset[2].Y | 
+| ??? | extruderOffset[3].X | 
+| ??? | extruderOffset[3].Y | 
+| ??? | extruderOffset[4].X | 
+| ??? | extruderOffset[4].Y | 
+| ??? | extruderOffset[5].X | 
+| ??? | extruderOffset[5].Y | 
+| ??? | extruderOffset[6].X | 
+| ??? | extruderOffset[6].Y | 
+| ??? | extruderOffset[7].X | 
+| ??? | extruderOffset[7].Y | 
+| ??? | extruderOffset[8].X | 
+| ??? | extruderOffset[8].Y | 
+| ??? | extruderOffset[9].X | 
+| ??? | extruderOffset[9].Y | 
+| ??? | extruderOffset[10].X | 
+| ??? | extruderOffset[10].Y | 
+| ??? | extruderOffset[11].X | 
+| ??? | extruderOffset[11].Y | 
+| ??? | extruderOffset[12].X | 
+| ??? | extruderOffset[12].Y | 
+| ??? | extruderOffset[13].X | 
+| ??? | extruderOffset[13].Y | 
+| ??? | extruderOffset[14].X | 
+| ??? | extruderOffset[14].Y | 
+| ??? | extruderOffset[15].X | 
+| ??? | extruderOffset[15].Y | 
+| start_gcode | startCode | GCode prologue
+| end_gcode | endCode | GCode epilogue
+| ??? | acceleration | ???
+| ??? | max_acceleration[0] | ???
+| ??? | max_acceleration[1] | ???
+| ??? | max_acceleration[2] | ???
+| ??? | max_acceleration[3] | ???
+| ??? | max_xy_jerk | ???
+| ??? | max_z_jerk | ???
+| ??? | max_e_jerk | ???
+|===
