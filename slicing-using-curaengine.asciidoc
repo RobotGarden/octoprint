@@ -90,7 +90,7 @@ Note: units are units of CuraEngine setting, not necessarily the same as Cura `.
 | cool_min_feedrate | minimalFeedrate | Minimum feed rate when slowing down a layer
 | cool_head_lift | coolHeadLift | ??? (set by Octoprint to 1 if cool_head_lift is true)
 | fan_enabled, fan_speed | fanSpeedMin | Minimum fan speed (set only if fan_enabled is true)
-| fan_speed_max | fanSpeedMax | Maximum fan speed (set only if fan_enabled is true0
+| fan_speed_max | fanSpeedMax | Maximum fan speed (set only if fan_enabled is true)
 | ??? | fixHorrible | ??? (set to zero by Octoprint)
 | spiralize | spiralizeMode | Whether to print perimeter in a helix fashion (set to 1 if spiralize is true)
 | follow_surface | simpleMode | ??? (set to 1 if follow_surface is true)
