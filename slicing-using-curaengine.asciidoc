@@ -125,8 +125,8 @@ Note: units are units of CuraEngine setting, not necessarily the same as Cura `.
 |  | extruderOffset[14].Y | 
 |  | extruderOffset[15].X | 
 |  | extruderOffset[15].Y | 
-| start_gcode | startCode | GCode prologue
-| end_gcode | endCode | GCode epilogue
+| start.gcode | startCode | GCode prologue
+| end.gcode | endCode | GCode epilogue
 | ??? | acceleration | ??? (left unset by Octoprint)
 | ??? | max_acceleration[0] | ??? (left unset by Octoprint)
 | ??? | max_acceleration[1] | ??? (left unset by Octoprint)
