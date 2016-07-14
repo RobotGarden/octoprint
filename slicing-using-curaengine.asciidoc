@@ -12,6 +12,8 @@ straightforward translation of the Cura `.ini` format to JSON.
 
 == Comparison of Cura and CuraEngine Settings
 
+You can also see the settings that Cura (GUI) is passing to CuraEngine by slicing in Cura and selecting File > Show slice engine log....
+
 Note: units are units of CuraEngine setting, not necessarily the same as Cura `.ini` setting.
 
 .Comparison of settings
